@@ -1,4 +1,5 @@
 # Getting Started with Create React App
+demo: [website](https://p27wasylik.github.io/calculator-react/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
