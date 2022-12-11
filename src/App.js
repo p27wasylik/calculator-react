@@ -30,13 +30,9 @@ function App() {
             content1={
               <Label
                 placeholder="PLN"
-                disable={false}
-              />
-            }
-            content2={
-              <Label
-                placeholder="EUR"
-                disable={true}
+                placeholder2="EUR"
+                sign= {true}
+                
               />
             }
 
@@ -50,19 +46,15 @@ function App() {
             content1={
               <Label
                 placeholder="EUR"
-                disable={false}
-              />
-            }
-            content2={
-              <Label
-                placeholder="PLN"
-                disable={true}
+                placeholder2="PLN"
+                sign={false}
+                
               />
             }
           />
         </Container>
       </Section>
-</>
+    </>
 
   )
 }
