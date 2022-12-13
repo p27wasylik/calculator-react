@@ -1,7 +1,26 @@
-.input {
+.label {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.label__input {
     border-radius: 10px;
     text-align: center;
     box-shadow: 2px 2px 8px #666;
-    padding: 10px;
-    margin: 30px auto;
+    height:30px;
+    padding: 15px;
+    
+}
+
+.label__resultSpan {
+    border-radius: 10px;
+    text-align: center;
+    background-color:#DDD;
+    border: 2px solid #666;
+    box-shadow: 2px 2px 8px #666;
+    height:20px;
+    width:200px;
+    padding: 15px;
+    line-height:0px;
 }

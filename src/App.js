@@ -30,7 +30,6 @@ function App() {
             content1={
               <Label
                 placeholder="PLN"
-                placeholder2="EUR"
                 sign= {true}
                 
               />
@@ -46,7 +45,6 @@ function App() {
             content1={
               <Label
                 placeholder="EUR"
-                placeholder2="PLN"
                 sign={false}
                 
               />

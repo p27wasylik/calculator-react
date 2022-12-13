@@ -1,18 +1,19 @@
 import './style.css';
 import React, { useState } from 'react';
 
-const Label = ({ placeholder, placeholder2, sign }) => {
+const Label = ({ placeholder, sign }) => {
     const [currency, setCurrency] = useState("");
-    
+    const result = sign ? currency * +4.86 : currency / +4.86 ;
 
 
 
     return (
-        <label>
+        <label
+        className="label">
             
             <input
                 value={currency}
-                className="input"
+                className="label__input"
                 type="number"
                 placeholder={placeholder}
                 step="0.1"
@@ -20,14 +21,11 @@ const Label = ({ placeholder, placeholder2, sign }) => {
                 onChange={({ target }) => setCurrency(target.value)}
             />
             
-            <input
-                value={{sign} ? {currency} * +4.86 : {currency} / +4.86}
-                className="input"
-                type="number"
-                placeholder={placeholder2}
-                step="0.1"
-                disable={true}
-            />
+            <span
+                className="label__resultSpan"
+                >
+                {result.toFixed(2)}{sign ? " EUR" : " PLN"}
+            </span>
         </label>
     );
 }
