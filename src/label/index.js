@@ -3,12 +3,13 @@ import React, { useState } from 'react';
 
 const Label = ({ placeholder, placeholder2, sign }) => {
     const [currency, setCurrency] = useState("");
-    const multiply = { currency } * +4.86;
-    const divide = { currency } / +4.86;
+    
+
 
 
     return (
         <label>
+            
             <input
                 value={currency}
                 className="input"
@@ -18,16 +19,14 @@ const Label = ({ placeholder, placeholder2, sign }) => {
                 disable={false}
                 onChange={({ target }) => setCurrency(target.value)}
             />
+            
             <input
-                value={
-                    { sign } ? multiply : divide
-                }
+                value={{sign} ? {currency} * +4.86 : {currency} / +4.86}
                 className="input"
                 type="number"
                 placeholder={placeholder2}
                 step="0.1"
                 disable={true}
-                onChange={({ target }) => setCurrency(target.value)}
             />
         </label>
     );
